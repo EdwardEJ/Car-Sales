@@ -1,9 +1,28 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './App';
+import { render } from 'react-dom';
+import { createStore } from 'redux'
+import { Provider } from 'react-redux'
+import { featureReducer } from './reducers/featureReducer'
 
+import App from './App';
 import 'bulma/css/bulma.css';
 import './styles.scss';
 
+
+//STORE -> GLOBALIZED STATE
+const store = createStore(featureReducer);
+//ACTION
+
+
+
+//REDUCER
+
+
 const rootElement = document.getElementById('root');
-ReactDOM.render(<App />, rootElement);
+
+render(
+  <Provider store={store}>
+    <App />
+  </Provider>
+  , rootElement
+);
