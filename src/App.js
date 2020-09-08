@@ -8,6 +8,8 @@ import AdditionalFeatures from './components/AdditionalFeatures';
 import Total from './components/Total';
 
 const App = ({ car, additionalFeatures, additionalPrice }) => {
+  //is being passed down as props
+  //argument is being destructured
 
   return (
     <div className="boxes">

@@ -1,10 +1,10 @@
 import React from 'react';
 import { render } from 'react-dom';
-import App from './App';
 import { createStore } from 'redux'
 import { Provider } from 'react-redux'
 import { featureReducer } from './reducers/featureReducer'
 
+import App from './App';
 import 'bulma/css/bulma.css';
 import './styles.scss';
 
