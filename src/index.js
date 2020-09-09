@@ -8,14 +8,8 @@ import App from './App';
 import 'bulma/css/bulma.css';
 import './styles.scss';
 
-
 //STORE -> GLOBALIZED STATE
 const store = createStore(featureReducer);
-//ACTION
-
-
-
-//REDUCER
 
 
 const rootElement = document.getElementById('root');

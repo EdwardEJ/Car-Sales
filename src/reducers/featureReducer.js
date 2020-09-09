@@ -1,5 +1,3 @@
-import { ADD_FEATURE, } from '../actions/featureActions'
-
 const initialState = {
   additionalPrice: 0,
   car: {
@@ -17,6 +15,7 @@ const initialState = {
   ]
 };
 
+//LOOK INTO COMBINE REDUCER
 export const featureReducer = (state = initialState, action) => {
   switch (action.type) {
     case "ADD_FEATURE":
