@@ -16,6 +16,7 @@ const initialState = {
 };
 
 //LOOK INTO COMBINE REDUCER
+
 export const featureReducer = (state = initialState, action) => {
   switch (action.type) {
     case "ADD_FEATURE":
@@ -24,7 +25,9 @@ export const featureReducer = (state = initialState, action) => {
       //add to feature
       return {
         ...state,
+
         additionalFeatures: state.additionalFeatures.filter(feature => feature.id !== action.payload.id),
+
         car: {
           ...state.car.price += action.payload.price,
           ...state.car,
@@ -35,11 +38,13 @@ export const featureReducer = (state = initialState, action) => {
 
       return {
         ...state,
+
         additionalFeatures: [...state.additionalFeatures, action.payload],
+
         car: {
           ...state.car.price -= action.payload.price,
           ...state.car,
-          features: state.car.features.filter(feature => feature.id !== action.payload)
+          features: state.car.features.filter(feature => feature.id !== action.payload.id)
         }
       }
     }
